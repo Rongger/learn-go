@@ -25,10 +25,17 @@ func main() {
 	// := 是一个声明语句，类型由编译器推断
 	num3 := 789
 
+	var num4 float32
+	// num4 = num3	// error，不支持隐式类型转换
+	num4 = float32(num3)
+
 	// *指针变量 &返回变量存储地址
 	var ptr *int = &num
+	// 指向指针的指针变量
+	var pptr **int = &ptr
 
-	fmt.Println(fmt.Sprintf("%s, World! %d %d %d", hello, num, num2, num3), ptr)
+	fmt.Println(fmt.Sprintf("%s, World! %d %d %d", hello, num, num2, num3), ptr, pptr)
+	fmt.Println(num4)
 
 	// 如果没有初始化，则变量默认为零值
 	fmt.Printf("%v %v %v %q\n", i, f, b, s)
@@ -46,6 +53,7 @@ func main() {
 	}
 
 	selectFunc()
+
 }
 
 func iotaFunc() {

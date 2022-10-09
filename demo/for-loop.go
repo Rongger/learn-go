@@ -22,7 +22,7 @@ func main() {
 	// 	sum++ // 无限循环下去
 	// }
 
-	// For-each range 循环，可以对字符串、数组、切片等进行迭代输出元素
+	// For-each range 循环，可以对字符串、数组、切片、集合等进行迭代输出元素
 	numbers := [6]int{1, 2, 3, 5}
 	for i, x := range numbers {
 		fmt.Printf("第 %d 位 x 的值 = %d\n", i, x)
