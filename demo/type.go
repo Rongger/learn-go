@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-type IBooks interface {
-	read()
-}
-
 // golang 没有 class ，但更强调类型 type，实现 class 只是 type 功能的一部分
 type Books struct {
 	title   string
@@ -14,12 +10,7 @@ type Books struct {
 	book_id int
 }
 
-func (b Books) read() {
-	fmt.Println("read")
-}
-
 func main() {
-
 	fmt.Println(Books{"Go", "me", "Go", 123})
 
 	var Book1 Books
